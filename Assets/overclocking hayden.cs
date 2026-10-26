@@ -53,24 +53,6 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""increases rate"",
-                    ""type"": ""Button"",
-                    ""id"": ""88b09092-3860-4b95-86e1-ca31644a0a07"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Hold"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""decrease rate"",
-                    ""type"": ""Button"",
-                    ""id"": ""cdabe88b-8605-438f-ba42-8b99d8d35729"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Hold,Press"",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -293,50 +275,6 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""850dc3cd-1a89-438a-9e37-2682536989d9"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""increases rate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0db592a7-ec63-468f-8906-d86f878b930c"",
-                    ""path"": ""<Keyboard>/equals"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""increases rate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""60e78e5e-cbd1-451e-8797-faf248b8f8d1"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""decrease rate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3125070d-2f28-40ea-bb1f-c90d13dba662"",
-                    ""path"": ""<Keyboard>/minus"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""decrease rate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -432,6 +370,24 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Quaternion"",
                     ""processors"": """",
                     ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""raiseRate"",
+                    ""type"": ""Button"",
+                    ""id"": ""59f4d397-92aa-473f-899e-4eaff2889170"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""lowerRate"",
+                    ""type"": ""Button"",
+                    ""id"": ""b69a24f4-86cf-4471-bdba-3365bb9e2ee0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -853,6 +809,50 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
                     ""action"": ""TrackedDeviceOrientation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2dae0aa8-fed0-41d5-a879-c0b4b242ba6d"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""raiseRate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c8c8e39-4258-4909-bbee-ccc23b1c339b"",
+                    ""path"": ""<Keyboard>/equals"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""raiseRate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ecb9d293-ea16-4ed9-9b55-f510c0ea70f9"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""lowerRate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85fd135c-3f69-4bb5-b47f-ebf32e5f30a3"",
+                    ""path"": ""<Keyboard>/minus"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""lowerRate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -925,8 +925,6 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
-        m_Player_increasesrate = m_Player.FindAction("increases rate", throwIfNotFound: true);
-        m_Player_decreaserate = m_Player.FindAction("decrease rate", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -939,6 +937,8 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        m_UI_raiseRate = m_UI.FindAction("raiseRate", throwIfNotFound: true);
+        m_UI_lowerRate = m_UI.FindAction("lowerRate", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1001,8 +1001,6 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
-    private readonly InputAction m_Player_increasesrate;
-    private readonly InputAction m_Player_decreaserate;
     public struct PlayerActions
     {
         private @Overclockinghayden m_Wrapper;
@@ -1010,8 +1008,6 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
-        public InputAction @increasesrate => m_Wrapper.m_Player_increasesrate;
-        public InputAction @decreaserate => m_Wrapper.m_Player_decreaserate;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1030,12 +1026,6 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
                 @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @increasesrate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIncreasesrate;
-                @increasesrate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIncreasesrate;
-                @increasesrate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIncreasesrate;
-                @decreaserate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDecreaserate;
-                @decreaserate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDecreaserate;
-                @decreaserate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDecreaserate;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1049,12 +1039,6 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
-                @increasesrate.started += instance.OnIncreasesrate;
-                @increasesrate.performed += instance.OnIncreasesrate;
-                @increasesrate.canceled += instance.OnIncreasesrate;
-                @decreaserate.started += instance.OnDecreaserate;
-                @decreaserate.performed += instance.OnDecreaserate;
-                @decreaserate.canceled += instance.OnDecreaserate;
             }
         }
     }
@@ -1073,6 +1057,8 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_RightClick;
     private readonly InputAction m_UI_TrackedDevicePosition;
     private readonly InputAction m_UI_TrackedDeviceOrientation;
+    private readonly InputAction m_UI_raiseRate;
+    private readonly InputAction m_UI_lowerRate;
     public struct UIActions
     {
         private @Overclockinghayden m_Wrapper;
@@ -1087,6 +1073,8 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
         public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
         public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
         public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
+        public InputAction @raiseRate => m_Wrapper.m_UI_raiseRate;
+        public InputAction @lowerRate => m_Wrapper.m_UI_lowerRate;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1126,6 +1114,12 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
                 @TrackedDeviceOrientation.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
+                @raiseRate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnRaiseRate;
+                @raiseRate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnRaiseRate;
+                @raiseRate.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnRaiseRate;
+                @lowerRate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnLowerRate;
+                @lowerRate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnLowerRate;
+                @lowerRate.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnLowerRate;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -1160,6 +1154,12 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
                 @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
+                @raiseRate.started += instance.OnRaiseRate;
+                @raiseRate.performed += instance.OnRaiseRate;
+                @raiseRate.canceled += instance.OnRaiseRate;
+                @lowerRate.started += instance.OnLowerRate;
+                @lowerRate.performed += instance.OnLowerRate;
+                @lowerRate.canceled += instance.OnLowerRate;
             }
         }
     }
@@ -1214,8 +1214,6 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
-        void OnIncreasesrate(InputAction.CallbackContext context);
-        void OnDecreaserate(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
@@ -1229,5 +1227,7 @@ public partial class @Overclockinghayden : IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+        void OnRaiseRate(InputAction.CallbackContext context);
+        void OnLowerRate(InputAction.CallbackContext context);
     }
 }
