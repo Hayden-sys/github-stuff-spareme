@@ -4,3 +4,6 @@ I used start and awake in order to intilaize the variables, but I didn't have en
 
 Devlog 10/26/26:
 I added in a 3D enviorment that has objects represeting the crafting machine, the harvesting machine, the destination for items, and conveyer belts. I added in the input/output text to the conveyer belts as a replacement for showing the items themselves, which I see no need to program. I also added keybinds like I orignally planned. - will decrease the craft rate, and = will increase it. I can't figure out how to make holding the buttons down change it fasater, but that can be implemented later. I also added an IInteractable method for opening the UI and added a button to close it. 
+
+Devlog 11/15/26
+I added in the script that changes the control scheme so you can't move while the UI is open. I also added in mechanics that create things out of the miner that are moved into the crafting machine, and outputted based on the clock speed, and finally put into a storage bin. I do not think it is perfect because of how I cannot change the recipe without going into unity editor, however you can clearly see it slow down as the clock speed, and therefore input requirements increase, which means that it is working. Perhaps if I added a timer and made it scale with the clcok speed, it would work better, but I do not know how to implement that at the moment.

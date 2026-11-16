@@ -7,8 +7,8 @@ using UnityEngine.InputSystem;
 //this is a copy I'm using to set everything up in a 2D enviorment, just to make everything easier for me
 public class SpeedManager : MonoBehaviour
 {
-[SerializeField] private float baseInput;
-[SerializeField] private float baseOutput;
+[SerializeField] public float baseInput;
+[SerializeField] public float baseOutput;
 //Changeable to account for different reciepes.
 [SerializeField] private TextMeshProUGUI inputCounter;
     [SerializeField] private TextMeshProUGUI outputCounter;
@@ -18,8 +18,8 @@ public class SpeedManager : MonoBehaviour
 
 //sets textboxs
 [SerializeField] private GameObject canvas;
-        private float inputRate;
-private float outputRate;
+        public float inputRate;
+public float outputRate;
 private float clockSpeed;
 //initilaizes floats
     // assign the actions asset to this field in the inspector:
@@ -40,6 +40,7 @@ outputRate = baseOutput;
     }
     void Start()
     {
+        actions.FindActionMap("UI").Disable();
 inputCounter.text = "Items per min: " + inputRate;
 outputCounter.text = "Items per min: " + outputRate;
 speedCounter.text = "Clock Speed: " + clockSpeed.ToString("P0");
@@ -95,6 +96,8 @@ outputCounter1.text = "Items per min: " + outputRate;
     }
     public void close()
     {
-    canvas.SetActive(false); 
+        actions.FindActionMap("Player").Enable();
+actions.FindActionMap("UI").Disable(); //switches control scheme
+    canvas.SetActive(false);  //closes ui
     }
 }

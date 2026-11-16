@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 
 public interface IInteractable
 {
@@ -18,6 +18,7 @@ public class Interaction : MonoBehaviour, IInteractable
     private string promptMessage = "Right Click to check clock speed";
     public GameObject targetObject;
      public string InteractionPrompt => promptMessage;
+     public InputActionAsset actions;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,10 @@ public class Interaction : MonoBehaviour, IInteractable
     }
      public void Interact() 
      {
-targetObject.SetActive(true);
-
+    
+targetObject.SetActive(true); //opens ui
+actions.FindActionMap("Player").Disable();
+actions.FindActionMap("UI").Enable();
+//switchs control scheme
      }
 }
